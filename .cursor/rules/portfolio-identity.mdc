@@ -1,0 +1,15 @@
+---
+description: Always use Raúl Peñate identity and content/*.ts as the portfolio source of truth
+alwaysApply: true
+---
+
+# Portfolio identity
+
+Before any content or UI work, read `docs/context/raul-penate.md` and the matching files in `content/`.
+
+- Never invent employers, dates, titles, cert names, or copy. Ask if a fact is missing.
+- Never replace CV facts with lorem ipsum or placeholder text.
+- UI must render data from `content/*`. Site assets go in `public/images/`. Mockups go in `designs/`.
+- If the user describes a portfolio add, update, or UI change without a slash command, follow `.cursor/skills/ship/SKILL.md`.
+- Add vs update: new entries only via add; existing entries only via update. If the match is ambiguous, ask.
+- GitHub PRs and related GitHub work must use the local `gh` CLI. Never curl the GitHub API.
