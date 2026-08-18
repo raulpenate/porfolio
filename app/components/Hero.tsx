@@ -119,6 +119,15 @@ export function Hero({
             }}
           />
 
+          {/* Extra soft circular gradient ring */}
+          <div
+            className="absolute inset-[-8%] -z-20 rounded-full"
+            style={{
+              background:
+                "radial-gradient(circle at 50% 55%, rgba(125,211,252,0.18), transparent 55%)",
+            }}
+          />
+
           <div className="relative rounded-[28px] bg-surface-elevated/10 p-3 backdrop-blur-sm md:p-4">
             <Image
               src={portrait}
