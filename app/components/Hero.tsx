@@ -110,21 +110,34 @@ export function Hero({
         </div>
 
         <div className="relative mx-auto w-full max-w-md lg:max-w-none">
+          {/* Layered background patterns behind the portrait */}
           <div
-            className="absolute inset-0 -z-10"
+            className="absolute inset-0 -z-10 rounded-[28px]"
             style={{
               background:
-                "radial-gradient(circle at 50% 40%, var(--glow), transparent 62%)",
+                "radial-gradient(circle at 30% 20%, var(--glow), transparent 45%), radial-gradient(circle at 70% 80%, color-mix(in oklab, var(--glow) 35%, transparent), transparent 55%), linear-gradient(to bottom, rgba(255,255,255,0.04), transparent 45%)",
             }}
           />
-          <Image
-            src={portrait}
-            alt={profile.displayName}
-            width={720}
-            height={720}
-            priority
-            className="mx-auto h-auto w-full object-contain object-bottom"
+
+          {/* Subtle outer ring frame */}
+          <div
+            className="absolute -inset-1 -z-20 rounded-[32px] border border-border/45"
+            style={{
+              background:
+                "radial-gradient(circle at 30% 20%, rgba(255,255,255,0.05), transparent 55%)",
+            }}
           />
+
+          <div className="relative rounded-[28px] border border-border/70 bg-surface-elevated/10 p-3 backdrop-blur-sm md:p-4">
+            <Image
+              src={portrait}
+              alt={profile.displayName}
+              width={720}
+              height={720}
+              priority
+              className="mx-auto h-auto w-full object-contain object-bottom"
+            />
+          </div>
         </div>
       </div>
     </section>
