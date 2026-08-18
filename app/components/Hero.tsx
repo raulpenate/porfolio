@@ -124,8 +124,8 @@ export function Hero({
             className="absolute inset-[-8%] -z-20 rounded-full"
             style={{
               background:
-                // Bottom-to-top pour using the same glow color as the rest of the hero
-                "radial-gradient(circle at 50% 120%, color-mix(in oklab, var(--glow) 42%, transparent), transparent 58%), linear-gradient(to top, color-mix(in oklab, var(--glow) 30%, transparent), transparent 70%), radial-gradient(circle at 50% 55%, transparent 62%, color-mix(in oklab, var(--glow) 26%, transparent), transparent 74%)",
+                // Bottom-to-top pour with two tones so the gradient reads clearly.
+                "radial-gradient(circle at 50% 120%, color-mix(in oklab, var(--glow) 52%, #7dd3fc 30%), transparent 56%), linear-gradient(to top, color-mix(in oklab, var(--glow) 36%, #a78bfa 26%), transparent 72%), radial-gradient(circle at 50% 55%, transparent 60%, color-mix(in oklab, var(--glow) 28%, #a78bfa 24%), transparent 74%)",
             }}
           />
 
