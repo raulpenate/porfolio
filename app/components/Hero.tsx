@@ -115,8 +115,20 @@ export function Hero({
             className="pointer-events-none absolute left-1/2 top-[54%] z-0 aspect-square w-[100%] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[2px]"
             style={{
               background:
-                // Visible ring stroke + soft inner glow.
-                "radial-gradient(circle at 50% 78%, rgba(0,0,0,0) 45%, rgba(125,211,252,0.48) 52%, rgba(167,139,250,0.28) 59%, rgba(0,0,0,0) 67%), radial-gradient(circle at 50% 78%, rgba(125,211,252,0.16) 0%, rgba(0,0,0,0) 72%)",
+                // Centered "liked" halo behind the portrait.
+                "radial-gradient(circle at 50% 55%, rgba(0,0,0,0) 48%, rgba(125,211,252,0.55) 54%, rgba(167,139,250,0.35) 60%, rgba(0,0,0,0) 68%), radial-gradient(circle at 50% 55%, rgba(125,211,252,0.18) 0%, rgba(0,0,0,0) 72%)",
+            }}
+          />
+
+          {/* Bottom-only overlay halo on top of the portrait */}
+          <div
+            className="pointer-events-none absolute left-1/2 top-[54%] z-[15] aspect-square w-[100%] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[1px] overflow-hidden"
+            style={{
+              // Mask: top transparent, bottom visible.
+              WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,1) 55%)",
+              maskImage: "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,1) 55%)",
+              background:
+                "radial-gradient(circle at 50% 55%, rgba(0,0,0,0) 42%, rgba(125,211,252,0.6) 48%, rgba(167,139,250,0.35) 55%, rgba(0,0,0,0) 62%), radial-gradient(circle at 50% 55%, rgba(125,211,252,0.22) 0%, rgba(0,0,0,0) 68%)",
             }}
           />
 
