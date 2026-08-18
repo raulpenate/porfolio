@@ -119,16 +119,7 @@ export function Hero({
             }}
           />
 
-          {/* Subtle outer ring frame */}
-          <div
-            className="absolute -inset-1 -z-20 rounded-[32px] border border-border/45"
-            style={{
-              background:
-                "radial-gradient(circle at 30% 20%, rgba(255,255,255,0.05), transparent 55%)",
-            }}
-          />
-
-          <div className="relative rounded-[28px] border border-border/70 bg-surface-elevated/10 p-3 backdrop-blur-sm md:p-4">
+          <div className="relative rounded-[28px] bg-surface-elevated/10 p-3 backdrop-blur-sm md:p-4">
             <Image
               src={portrait}
               alt={profile.displayName}
