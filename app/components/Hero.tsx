@@ -110,25 +110,24 @@ export function Hero({
         </div>
 
         <div className="relative mx-auto w-full max-w-md lg:max-w-none isolate">
-          {/* Strong circular halo behind the portrait */}
+          {/* Always-on circular halo behind the portrait */}
           <div
-            className="pointer-events-none absolute left-1/2 top-[54%] z-0 aspect-square w-[100%] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[2px]"
+            className="pointer-events-none absolute left-1/2 top-[54%] z-0 aspect-square w-[94%] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[0.8px]"
             style={{
               background:
-                // Centered "liked" halo behind the portrait.
-                "radial-gradient(circle at 50% 55%, rgba(0,0,0,0) 48%, rgba(125,211,252,0.55) 54%, rgba(167,139,250,0.35) 60%, rgba(0,0,0,0) 68%), radial-gradient(circle at 50% 55%, rgba(125,211,252,0.18) 0%, rgba(0,0,0,0) 72%)",
+                // Symmetric (always circular) ring; overlay will handle the bottom emphasis.
+                // Softer + more uniform tone for a more formal look (less "mystical" glow).
+                "radial-gradient(circle at 50% 50%, rgba(0,0,0,0) 46%, rgba(125,211,252,0.22) 49%, rgba(125,211,252,0.10) 54%, rgba(0,0,0,0) 66%)",
             }}
           />
 
-          {/* Bottom-only overlay halo on top of the portrait */}
+          {/* Ground shadow to visually anchor the portrait */}
           <div
-            className="pointer-events-none absolute left-1/2 top-[54%] z-[15] aspect-square w-[100%] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[1px] overflow-hidden"
+            className="pointer-events-none absolute left-1/2 top-[88%] z-[5] h-[14%] w-[65%] -translate-x-1/2 -translate-y-1/2 rounded-[50%] blur-[20px]"
             style={{
-              // Mask: top transparent, bottom visible.
-              WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,1) 55%)",
-              maskImage: "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,1) 55%)",
               background:
-                "radial-gradient(circle at 50% 55%, rgba(0,0,0,0) 42%, rgba(125,211,252,0.6) 48%, rgba(167,139,250,0.35) 55%, rgba(0,0,0,0) 62%), radial-gradient(circle at 50% 55%, rgba(125,211,252,0.22) 0%, rgba(0,0,0,0) 68%)",
+                "radial-gradient(ellipse at 50% 50%, var(--accent) 0%, rgba(0,0,0,0) 70%)",
+              opacity: 0.35,
             }}
           />
 
