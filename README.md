@@ -1,34 +1,48 @@
 # Raúl Peñate Portfolio
 
-Next.js portfolio site. Content lives in `content/*` and is rendered by the app.
+Next.js site. Content lives in `content/*` and is rendered by the app.
 
-## Arch installer (`archinstaller`)
+## Tech
 
-This portfolio links to my `archinstaller` script:
+- Next.js `16.3.1`
+- React `19.2.8`
+- pnpm `11.22.0`
+- Build output: `out/` (Next.js `output: "export"` used for GitHub Pages)
 
-- It is a Bash-based script to install Arch Linux plus the tools I use day to day.
-- It was built long before AI tooling was mainstream.
-- The first versions took many hours of iteration and debugging to make it reliable.
+## Prerequisites
 
-## Commit and push workflow (diagram)
+- Node.js (GitHub Pages workflow uses Node `22`)
+- pnpm (repo specifies `packageManager: pnpm@11.22.0`)
 
-```mermaid
-flowchart TD
-  A[Update content and/or UI] --> B[Run checks (lint/build)]
-  B --> C[git status + git diff]
-  C --> D[git commit -m message]
-  D --> E[git push -u origin HEAD]
-  E --> F[Open PR with gh pr create]
+## Install
+
+```bash
+corepack enable
+pnpm install --frozen-lockfile
 ```
 
-Example commands:
+## Run locally
+
+```bash
+pnpm dev
+```
+
+Open the URL printed by `next dev`.
+
+## Build for production (static export)
+
+```bash
+pnpm build
+```
+
+This generates the exported site in `out/`.
+
+## Lint
 
 ```bash
 pnpm lint
-pnpm build
-git status
-git diff
-git commit -m "..."
-git push -u origin HEAD
-gh pr create --title "..." --body "..."
 ```
+
+## Security
+
+See `SECURITY.md`.
