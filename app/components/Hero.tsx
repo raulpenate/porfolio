@@ -116,7 +116,7 @@ export function Hero({
             style={{
               background:
                 // Visible ring stroke + soft inner glow.
-                "radial-gradient(circle at 50% 55%, rgba(0,0,0,0) 48%, rgba(125,211,252,0.55) 54%, rgba(167,139,250,0.35) 60%, rgba(0,0,0,0) 68%), radial-gradient(circle at 50% 55%, rgba(125,211,252,0.18) 0%, rgba(0,0,0,0) 72%)",
+                "radial-gradient(circle at 50% 78%, rgba(0,0,0,0) 45%, rgba(125,211,252,0.48) 52%, rgba(167,139,250,0.28) 59%, rgba(0,0,0,0) 67%), radial-gradient(circle at 50% 78%, rgba(125,211,252,0.16) 0%, rgba(0,0,0,0) 72%)",
             }}
           />
 
