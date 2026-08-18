@@ -66,5 +66,5 @@ If the user describes a portfolio content or UI change without a slash command, 
 - Patch existing entries: `/update-portfolio`
 - Replicate UI from images: `/draw-portfolio`
 - Commit + PR: `/push-pr`
-- Tag + GitHub Release + Vercel: `/deploy`
+- Push `main` to GitHub Pages: `/deploy`
 - Full flow: `/ship`

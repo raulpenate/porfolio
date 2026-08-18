@@ -71,7 +71,7 @@ images: <copied paths or none>
 
 PRs, checks, issues, releases, and other GitHub work use the **`gh` binary on this machine** (`which gh`, `gh auth status`, then `gh pr create` / `gh release create` / `gh pr view`). Never curl the GitHub API or invent tokens. If `gh` is missing or logged out, stop and ask the user to install or run `gh auth login`.
 
-Production deploy: `/deploy` tags `HEAD`, publishes a GitHub Release, and `.github/workflows/release-deploy.yml` deploys to Vercel.
+Production deploy: push to `main` runs `.github/workflows/github-pages.yml` and publishes https://raulpenate.github.io/porfolio/. `/deploy` pushes `main` and watches that run. No Vercel.
 
 ## UI
 

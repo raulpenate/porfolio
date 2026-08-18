@@ -5,6 +5,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { IconChevronLeft, IconChevronRight, IconClose } from "./icons";
 import { useLocale } from "./LocaleProvider";
+import { withBasePath } from "../lib/basePath";
 
 type PhotoGalleryProps = {
   images: string[];
@@ -167,7 +168,7 @@ function Lightbox({
       ) : null}
 
       <img
-        src={images[index]}
+        src={withBasePath(images[index])}
         alt={alt}
         onClick={(event) => event.stopPropagation()}
         className="max-h-[90vh] max-w-[min(92vw,1200px)] object-contain"

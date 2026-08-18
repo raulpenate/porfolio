@@ -1,6 +1,6 @@
 ---
 name: release-tag
-description: Alias of /deploy. Suggest a semver version, create a git tag, and publish a GitHub Release. Use when the user runs /release-tag.
+description: Alias of /deploy. Push to main so GitHub Pages rebuilds. Use when the user runs /release-tag.
 disable-model-invocation: true
 ---
 
