@@ -1,26 +1,85 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Light — cool navy-tinted paper */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f4f6fa;
+  --foreground: #0c1220;
+  --muted: #5c6678;
+  --muted-strong: #7a8496;
+  --accent: #3d6fd8;
+  --surface: #ffffff;
+  --surface-elevated: #e8eef8;
+  --border: #d5dce8;
+  --glow: color-mix(in oklab, var(--accent) 16%, transparent);
+}
+
+/* Dark — navy ink from portrait */
+.dark {
+  --background: #070b12;
+  --foreground: #f4f6f8;
+  --muted: #9aa3b2;
+  --muted-strong: #6b7585;
+  --accent: #5b8def;
+  --surface: #0f1622;
+  --surface-elevated: #162033;
+  --border: #243044;
+  --glow: color-mix(in oklab, var(--accent) 18%, transparent);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-muted: var(--muted);
+  --color-muted-strong: var(--muted-strong);
+  --color-accent: var(--accent);
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-border: var(--border);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-body);
+  --font-mono: var(--font-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4.75rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), system-ui, sans-serif;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--accent) 45%, white);
+  color: #0c1220;
+}
+
+.dark ::selection {
+  color: #070b12;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.55s ease-out both;
 }

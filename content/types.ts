@@ -1,3 +1,5 @@
+export type Locale = "en" | "es";
+
 export type PortfolioSection =
   | "profile"
   | "education"
@@ -12,6 +14,7 @@ export type DateMonth = string;
 export type DateEnd = DateMonth | "present";
 
 export type SkillGroup = {
+  id: string;
   category: string;
   items: string[];
 };
@@ -19,6 +22,11 @@ export type SkillGroup = {
 export type Language = {
   name: string;
   level: string;
+};
+
+export type ProfileLink = {
+  label: string;
+  href: string;
 };
 
 export type Profile = {
@@ -30,6 +38,7 @@ export type Profile = {
   email: string;
   languages: Language[];
   skills: SkillGroup[];
+  links?: ProfileLink[];
   images?: string[];
 };
 
@@ -58,6 +67,11 @@ export type Experience = {
   images?: string[];
 };
 
+export type ProjectLink = {
+  name: string;
+  href: string;
+};
+
 export type Project = {
   id: string;
   name: string;
@@ -66,6 +80,8 @@ export type Project = {
   bullets: string[];
   tech?: string[];
   images?: string[];
+  repos?: ProjectLink[];
+  links?: ProjectLink[];
 };
 
 export type Certification = {

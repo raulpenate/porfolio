@@ -5,9 +5,28 @@ export const profile: Profile = {
   fullName: "Raúl Humberto Peñate Ramírez",
   displayName: "Raúl Peñate",
   headline:
-    "CCA-F-certified agentic software engineer specializing in advanced AI integrations with Anthropic's Claude. I focus on building highly scalable, spec-driven systems (JavaScript/TypeScript, Java, Cloud Architecture) and leverage tools like the Model Context Protocol to bridge cutting-edge AI capabilities with robust backend architectures.",
+    "CCA-F certified agentic software engineer. I work with Claude. I handle architecture, code, tests, and production deploys. JavaScript/TypeScript, Java, cloud architecture, and MCP.",
   location: "El Salvador, San Salvador",
   email: "dev.raulpenate@gmail.com",
+  links: [
+    {
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/raulpenate/",
+    },
+    {
+      label: "GitHub",
+      href: "https://github.com/raulpenate",
+    },
+    {
+      label: "Stack Overflow",
+      href: "https://stackoverflow.com/users/15445661/raul-penate",
+    },
+    {
+      label: "Luma",
+      href: "https://luma.com/user/raulpenate",
+    },
+  ],
+  images: ["/images/profile/raul-penate-portrait.png"],
   languages: [
     { name: "Spanish", level: "native" },
     { name: "English", level: "C1" },
@@ -15,10 +34,12 @@ export const profile: Profile = {
   skills: [
     {
       category: "AI tools",
+      id: "ai-tools",
       items: ["Claude Code", "Cursor CLI", "AgentOS", "Spec-Kit", "Gemini"],
     },
     {
       category: "Frontend",
+      id: "frontend",
       items: [
         "React.js",
         "Vue.js",
@@ -37,6 +58,7 @@ export const profile: Profile = {
     },
     {
       category: "Backend",
+      id: "backend",
       items: [
         "Node.js (Express.js, Nest.js, Mongoose, Sequelize, TypeORM)",
         "C# (ASP.NET Core, Entity Framework)",
@@ -51,10 +73,12 @@ export const profile: Profile = {
     },
     {
       category: "Databases",
+      id: "databases",
       items: ["SQL Server", "MySQL", "MongoDB", "PostgreSQL", "Firebase"],
     },
     {
       category: "Cloud & DevOps",
+      id: "cloud-devops",
       items: [
         "Docker",
         "AWS",
@@ -71,6 +95,7 @@ export const profile: Profile = {
     },
     {
       category: "Package managers",
+      id: "package-managers",
       items: [
         "npm",
         "pnpm",
@@ -85,10 +110,12 @@ export const profile: Profile = {
     },
     {
       category: "Testing",
+      id: "testing",
       items: ["Jest", "PyTest", "Playwright"],
     },
     {
       category: "Knowledge",
+      id: "knowledge",
       items: [
         "SOLID principles",
         "good practices",

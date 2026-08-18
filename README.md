@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Raúl Peñate Portfolio
 
-## Getting Started
+Next.js portfolio site. Content lives in `content/*` and is rendered by the app.
 
-First, run the development server:
+## Arch installer (`archinstaller`)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+This portfolio links to my `archinstaller` script:
+
+- It is a Bash-based script to install Arch Linux plus the tools I use day to day.
+- It was built long before AI tooling was mainstream.
+- The first versions took many hours of iteration and debugging to make it reliable.
+
+## Commit and push workflow (diagram)
+
+```mermaid
+flowchart TD
+  A[Update content and/or UI] --> B[Run checks (lint/build)]
+  B --> C[git status + git diff]
+  C --> D[git commit -m "message"]
+  D --> E[git push -u origin HEAD]
+  E --> F[Open PR with `gh pr create`]
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Example commands:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+pnpm lint
+pnpm build
+git status
+git diff
+git commit -m "..."
+git push -u origin HEAD
+gh pr create --title "..." --body "..."
+```

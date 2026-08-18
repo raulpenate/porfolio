@@ -12,6 +12,30 @@ export const projects: Project[] = [
       "Used Claude Code with spec-driven development through AgentOS to manage AI agents and develop the whole backend.",
     ],
     tech: ["ChatGPT API", "Claude Code", "AgentOS"],
+    images: ["/images/projects/levelo/cursor-hackathon.jpg"],
+  },
+  {
+    id: "claude-for-dummies-sv",
+    name: "Claude For Dummies SV",
+    summary:
+      "Helped with El Salvador's first Claude conference. Claude and Notion MCP meetup, thanks to Ai Labs.",
+    bullets: [
+      "Helped at Claude For Dummies SV (Claude & Notion MCP for dummies), El Salvador's first Claude and Notion MCP meetup.",
+      "Spoke on Don Quijote en la Era del Silicio.",
+      "Thanks to Ai Labs for supporting the meetup, hosted at Universidad Francisco Gavidia.",
+    ],
+    tech: ["Claude", "MCP", "Notion"],
+    images: [
+      "/images/projects/claude-for-dummies-sv/group.png",
+      "/images/projects/claude-for-dummies-sv/talk.png",
+      "/images/projects/claude-for-dummies-sv/poster.png",
+    ],
+    links: [
+      {
+        name: "Ai Labs",
+        href: "https://www.ailabs.sv/en",
+      },
+    ],
   },
   {
     id: "react-websockets",
@@ -24,16 +48,33 @@ export const projects: Project[] = [
       "Real-time voting application for bands.",
     ],
     tech: ["React.js", "TypeScript", "Socket.IO"],
+    repos: [
+      {
+        name: "WebSockets-React",
+        href: "https://github.com/raulpenate/WebSockets-React",
+      },
+    ],
   },
   {
     id: "bash-linux",
     name: "Bash",
     summary: "Linux tooling and window-manager customization.",
     bullets: [
-      "Arch Linux installer (an installer for a fully functioning Linux operating system called Arch).",
+      "Arch Linux installer (script to install Arch Linux plus the tools I use day to day).",
+      "Built long before AI tooling was mainstream, and the early versions took a lot of trial-and-error hours to make it reliable.",
       "i3wm themes (collection of custom themes for i3 window manager).",
     ],
     tech: ["Bash", "Arch Linux", "i3wm"],
+    repos: [
+      {
+        name: "archinstaller",
+        href: "https://github.com/raulpenate/archinstaller",
+      },
+      {
+        name: ".dotfiles-i3wm",
+        href: "https://github.com/raulpenate/.dotfiles-i3wm",
+      },
+    ],
   },
   {
     id: "vue-apps",
@@ -45,6 +86,16 @@ export const projects: Project[] = [
       "JournalApp (Vuex).",
     ],
     tech: ["Vue.js", "TypeScript", "MapBox", "Vuex"],
+    repos: [
+      {
+        name: "journal-app",
+        href: "https://github.com/raulpenate/journal-app",
+      },
+      {
+        name: "mapbox-ts-vue",
+        href: "https://github.com/raulpenate/mapbox-ts-vue",
+      },
+    ],
   },
   {
     id: "pokeapi-hoenn",
@@ -52,6 +103,12 @@ export const projects: Project[] = [
     summary: "Responsive React.js PokeApi for Hoenn.",
     bullets: ["PokeApi for Hoenn (Responsive)."],
     tech: ["React.js"],
+    repos: [
+      {
+        name: "pokemon-api-hoenn",
+        href: "https://github.com/raulpenate/pokemon-api-hoenn",
+      },
+    ],
   },
   {
     id: "jungle-ds-algo",
@@ -64,6 +121,12 @@ export const projects: Project[] = [
       "Built using Python with MKDocs and JavaScript, deployed on GitHub with a Dockerfile for CI/CD, and uses KaTeX to render math synchronously.",
     ],
     tech: ["Python", "MKDocs", "JavaScript", "Docker", "KaTeX", "Java"],
+    repos: [
+      {
+        name: "DS-Algo",
+        href: "https://github.com/raulpenate/DS-Algo",
+      },
+    ],
   },
   {
     id: "pypususa",
@@ -75,5 +138,11 @@ export const projects: Project[] = [
       "PyPususa: a Salvadorian-JS syntax interpreter built in Python using Test-Driven Development (TDD).",
     ],
     tech: ["Python", "TDD"],
+    repos: [
+      {
+        name: "PyPususa",
+        href: "https://github.com/raulpenate/PyPususa",
+      },
+    ],
   },
 ];
