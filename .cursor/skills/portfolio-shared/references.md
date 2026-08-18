@@ -10,10 +10,11 @@ Read this file plus `docs/context/raul-penate.md` and `content/types.ts` before 
 | education | `content/education.ts` | `id` or institution + program |
 | experience | `content/experience.ts` | `id` or company + role |
 | projects | `content/projects.ts` | `id` or name |
+| articles | `content/articles.ts` | `id` or title + href |
 | certifications | `content/certifications.ts` | `id` or name (+ issuer if given) |
 | awards | `content/awards.ts` | `id` or name |
 
-Aliases: career/work/jobs → experience. certs → certifications. about/bio/headline → profile.
+Aliases: career/work/jobs → experience. certs → certifications. about/bio/headline → profile. writing/posts → articles.
 
 ## IDs
 
@@ -22,6 +23,7 @@ New entries get a stable kebab-case `id`.
 - Experience: `{company}-{role-slug}-{start-year}` e.g. `ravn-backend-2025`
 - Education: `{institution-slug}-{program-slug}-{start-year}`
 - Project: `{name-slug}`
+- Article: `{title-slug}`
 - Certification: `{issuer-slug}-{name-slug}` or `{name-slug}`
 - Award: `{name-slug}`
 
@@ -67,7 +69,9 @@ images: <copied paths or none>
 
 ## GitHub
 
-PRs, checks, issues, and other GitHub work use the **`gh` binary on this machine** (`which gh`, `gh auth status`, then `gh pr create` / `gh pr view`). Never curl the GitHub API or invent tokens. If `gh` is missing or logged out, stop and ask the user to install or run `gh auth login`.
+PRs, checks, issues, releases, and other GitHub work use the **`gh` binary on this machine** (`which gh`, `gh auth status`, then `gh pr create` / `gh release create` / `gh pr view`). Never curl the GitHub API or invent tokens. If `gh` is missing or logged out, stop and ask the user to install or run `gh auth login`.
+
+Production deploy: `/deploy` tags `HEAD`, publishes a GitHub Release, and `.github/workflows/release-deploy.yml` deploys to Vercel.
 
 ## UI
 

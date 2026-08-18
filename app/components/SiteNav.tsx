@@ -10,6 +10,7 @@ import { ThemeToggle } from "./ThemeToggle";
 const navHrefs = [
   { key: "home", href: "#home" },
   { key: "work", href: "#projects" },
+  { key: "articles", href: "#articles" },
   { key: "experience", href: "#experience" },
   { key: "stack", href: "#stack" },
   { key: "about", href: "#about" },
@@ -33,13 +34,20 @@ export function SiteNav({ profile }: { profile: Profile }) {
       const max = doc.scrollHeight - doc.clientHeight;
       setProgress(max > 0 ? Math.min(1, doc.scrollTop / max) : 0);
 
-      const marker = 120;
       let current = sections[0]?.id ?? "home";
+
+      // Use stable document coordinates so short sections (like About) still register.
+      // Header is sticky, so consider a point slightly below it.
+      const headerOffset = Math.min(180, Math.round(window.innerHeight * 0.2));
       for (const section of sections) {
-        if (section.getBoundingClientRect().top <= marker) {
-          current = section.id;
-        }
+        if (section.offsetTop <= window.scrollY + headerOffset) current = section.id;
       }
+
+      // If we are at (or extremely close to) the bottom, force the last section active.
+      if (window.scrollY + window.innerHeight >= doc.scrollHeight - 8) {
+        current = sections[sections.length - 1]?.id ?? current;
+      }
+
       setActive(current);
     };
 

@@ -5,6 +5,7 @@ export type PortfolioSection =
   | "education"
   | "experience"
   | "projects"
+  | "articles"
   | "certifications"
   | "awards";
 
@@ -65,6 +66,22 @@ export type Experience = {
   bullets: string[];
   tech?: string[];
   images?: string[];
+};
+
+export type ArticleSource = "dev.to" | "linkedin";
+
+export type ArticleFeed = {
+  id: ArticleSource;
+  label: string;
+  href: string;
+};
+
+export type Article = {
+  id: string;
+  title: Record<Locale, string>;
+  href: Partial<Record<Locale, string>>;
+  source: ArticleSource;
+  date?: DateMonth;
 };
 
 export type ProjectLink = {

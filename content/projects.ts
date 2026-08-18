@@ -77,40 +77,6 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: "vue-apps",
-    name: "Vue.js",
-    summary: "Vue.js applications.",
-    bullets: [
-      "Who's That Pokémon?",
-      "Map App (TypeScript & MapBox).",
-      "JournalApp (Vuex).",
-    ],
-    tech: ["Vue.js", "TypeScript", "MapBox", "Vuex"],
-    repos: [
-      {
-        name: "journal-app",
-        href: "https://github.com/raulpenate/journal-app",
-      },
-      {
-        name: "mapbox-ts-vue",
-        href: "https://github.com/raulpenate/mapbox-ts-vue",
-      },
-    ],
-  },
-  {
-    id: "pokeapi-hoenn",
-    name: "PokeApi for Hoenn",
-    summary: "Responsive React.js PokeApi for Hoenn.",
-    bullets: ["PokeApi for Hoenn (Responsive)."],
-    tech: ["React.js"],
-    repos: [
-      {
-        name: "pokemon-api-hoenn",
-        href: "https://github.com/raulpenate/pokemon-api-hoenn",
-      },
-    ],
-  },
-  {
     id: "jungle-ds-algo",
     name: "The jungle of DS & Algo",
     summary:

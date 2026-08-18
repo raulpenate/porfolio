@@ -1,4 +1,5 @@
 import type {
+  ArticleFeed,
   Award,
   Certification,
   Education,
@@ -18,6 +19,7 @@ export const profileEs: Profile = {
   links: [
     { label: "LinkedIn", href: "https://www.linkedin.com/in/raulpenate/" },
     { label: "GitHub", href: "https://github.com/raulpenate" },
+    { label: "DEV", href: "https://dev.to/raulpenate" },
     {
       label: "Stack Overflow",
       href: "https://stackoverflow.com/users/15445661/raul-penate",
@@ -341,40 +343,6 @@ export const projectsEs: Project[] = [
     ],
   },
   {
-    id: "vue-apps",
-    name: "Vue.js",
-    summary: "Aplicaciones en Vue.js.",
-    bullets: [
-      "Who's That Pokémon?",
-      "Map App (TypeScript y MapBox).",
-      "JournalApp (Vuex).",
-    ],
-    tech: ["Vue.js", "TypeScript", "MapBox", "Vuex"],
-    repos: [
-      {
-        name: "journal-app",
-        href: "https://github.com/raulpenate/journal-app",
-      },
-      {
-        name: "mapbox-ts-vue",
-        href: "https://github.com/raulpenate/mapbox-ts-vue",
-      },
-    ],
-  },
-  {
-    id: "pokeapi-hoenn",
-    name: "PokeApi for Hoenn",
-    summary: "PokeApi de Hoenn en React.js, responsive.",
-    bullets: ["PokeApi for Hoenn (responsive)."],
-    tech: ["React.js"],
-    repos: [
-      {
-        name: "pokemon-api-hoenn",
-        href: "https://github.com/raulpenate/pokemon-api-hoenn",
-      },
-    ],
-  },
-  {
     id: "jungle-ds-algo",
     name: "The jungle of DS & Algo",
     summary:
@@ -444,6 +412,19 @@ export const certificationsEs: Certification[] = [
   },
   { id: "platzi-data-science", name: "Data Science", issuer: "Platzi" },
   { id: "platzi-csharp-dotnet", name: "C# .NET", issuer: "Platzi" },
+];
+
+export const articleFeedsEs: ArticleFeed[] = [
+  {
+    id: "linkedin",
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/raulpenate/recent-activity/articles/",
+  },
+  {
+    id: "dev.to",
+    label: "DEV",
+    href: "https://dev.to/raulpenate",
+  },
 ];
 
 export const educationEs: Education[] = [

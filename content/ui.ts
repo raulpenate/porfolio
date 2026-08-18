@@ -5,6 +5,7 @@ export type UiCopy = {
     home: string;
     work: string;
     experience: string;
+    articles: string;
     stack: string;
     about: string;
     contact: string;
@@ -28,6 +29,11 @@ export type UiCopy = {
   experience: {
     title: string;
     earlier: string;
+  };
+  articles: {
+    title: string;
+    viewAll: string;
+    language: string;
   };
   stack: {
     title: string;
@@ -58,6 +64,7 @@ export const ui: Record<Locale, UiCopy> = {
       home: "Home",
       work: "Work",
       experience: "Experience",
+      articles: "Articles",
       stack: "Stack",
       about: "About",
       contact: "Contact",
@@ -82,6 +89,11 @@ export const ui: Record<Locale, UiCopy> = {
     experience: {
       title: "Experience",
       earlier: "Earlier",
+    },
+    articles: {
+      title: "Articles",
+      viewAll: "View all",
+      language: "Article language",
     },
     stack: {
       title: "Stack",
@@ -110,6 +122,7 @@ export const ui: Record<Locale, UiCopy> = {
       home: "Inicio",
       work: "Proyectos",
       experience: "Experiencia",
+      articles: "Artículos",
       stack: "Stack",
       about: "Sobre mí",
       contact: "Contacto",
@@ -134,6 +147,11 @@ export const ui: Record<Locale, UiCopy> = {
     experience: {
       title: "Experiencia",
       earlier: "Antes",
+    },
+    articles: {
+      title: "Artículos",
+      viewAll: "Ver todos",
+      language: "Idioma del artículo",
     },
     stack: {
       title: "Stack",

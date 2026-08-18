@@ -8,7 +8,8 @@ Canonical agent context for this site. Facts live in `content/*.ts`. Do not inve
 - **Headline:** CCA-F certified agentic software engineer. I work with Claude. I handle architecture, code, tests, and production deploys. JavaScript/TypeScript, Java, cloud architecture, and MCP.
 - **Location:** El Salvador, San Salvador
 - **Email:** dev.raulpenate@gmail.com
-- **Links:** [LinkedIn](https://www.linkedin.com/in/raulpenate/), [GitHub](https://github.com/raulpenate), [Stack Overflow](https://stackoverflow.com/users/15445661/raul-penate), [Luma](https://luma.com/user/raulpenate)
+- **Links:** [LinkedIn](https://www.linkedin.com/in/raulpenate/), [GitHub](https://github.com/raulpenate), [DEV](https://dev.to/raulpenate), [Stack Overflow](https://stackoverflow.com/users/15445661/raul-penate), [Luma](https://luma.com/user/raulpenate)
+- **Articles:** DEV posts in `content/articles.ts`. LinkedIn articles feed: https://www.linkedin.com/in/raulpenate/recent-activity/articles/
 - **Languages:** Spanish (native), English (C1)
 - **Portrait:** `/images/profile/raul-penate-portrait.png`
 
@@ -24,6 +25,7 @@ Write as Raúl: short sentences, backend- and systems-heavy, comfortable with Cl
 | Education | `content/education.ts` |
 | Experience (career) | `content/experience.ts` |
 | Personal projects | `content/projects.ts` |
+| Articles | `content/articles.ts` |
 | Certifications | `content/certifications.ts` |
 | Awards | `content/awards.ts` |
 | Types / ids | `content/types.ts` |
@@ -36,6 +38,7 @@ English in `content/*.ts` is the source of truth. Spanish lives in `content/es.t
 - **career** → experience
 - **work / jobs** → experience
 - **personal projects** → projects
+- **writing / posts / articles** → articles
 - **certs** → certifications
 - **about / bio / headline** → profile
 
@@ -44,6 +47,7 @@ English in `content/*.ts` is the source of truth. Spanish lives in `content/es.t
 - Experience: `id` or company + role
 - Education: `id` or institution + program
 - Projects: `id` or name
+- Articles: `id` or title + href
 - Certifications: `id` or name (+ issuer if present)
 - Awards: `id` or name
 - Profile: single record, `id: "profile"`
@@ -62,4 +66,5 @@ If the user describes a portfolio content or UI change without a slash command, 
 - Patch existing entries: `/update-portfolio`
 - Replicate UI from images: `/draw-portfolio`
 - Commit + PR: `/push-pr`
+- Tag + GitHub Release + Vercel: `/deploy`
 - Full flow: `/ship`

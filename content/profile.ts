@@ -18,6 +18,10 @@ export const profile: Profile = {
       href: "https://github.com/raulpenate",
     },
     {
+      label: "DEV",
+      href: "https://dev.to/raulpenate",
+    },
+    {
       label: "Stack Overflow",
       href: "https://stackoverflow.com/users/15445661/raul-penate",
     },

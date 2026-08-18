@@ -1,6 +1,6 @@
 ---
 name: update-portfolio
-description: Patch an existing portfolio entry (education, experience, projects, certifications, awards, or profile) using user-provided text, dates, and images. Use when the user runs /update-portfolio or asks to update existing career, education, project, cert, or award content.
+description: Patch an existing portfolio entry (education, experience, projects, articles, certifications, awards, or profile) using user-provided text, dates, and images. Use when the user runs /update-portfolio or asks to update existing career, education, project, article, cert, or award content.
 disable-model-invocation: true
 ---
 
@@ -18,7 +18,7 @@ Read in order:
 
 ## Steps
 
-1. Identify the section (education, experience/career, projects, certifications, awards, profile). If missing or ambiguous, ask.
+1. Identify the section (education, experience/career, projects, articles, certifications, awards, profile). If missing or ambiguous, ask.
 2. Find the target by `id` or the match keys in the shared reference.
 3. **If no match:** stop. Tell the user to run `/add-portfolio`.
 4. **If multiple matches:** ask which `id` to update.

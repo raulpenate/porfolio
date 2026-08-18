@@ -1,6 +1,7 @@
 "use client";
 
 import { About } from "./About";
+import { Articles } from "./Articles";
 import { ExperienceSection } from "./Experience";
 import { Hero } from "./Hero";
 import { IconMail, IconMapPin } from "./icons";
@@ -12,7 +13,8 @@ import { useLocale } from "./LocaleProvider";
 
 export function Home() {
   const { content } = useLocale();
-  const { profile, awards, certifications, experience, projects } = content;
+  const { profile, awards, certifications, experience, projects, articles, articleFeeds } =
+    content;
 
   return (
     <div className="flex min-h-full flex-col bg-background">
@@ -30,6 +32,7 @@ export function Home() {
           experience={experience}
         />
         <Projects projects={projects} awards={awards} />
+        <Articles articles={articles} feeds={articleFeeds} />
         <ExperienceSection experience={experience} />
         <Stack profile={profile} />
         <About profile={profile} />

@@ -1,4 +1,7 @@
 export type {
+  Article,
+  ArticleFeed,
+  ArticleSource,
   Award,
   Certification,
   DateEnd,
@@ -15,6 +18,7 @@ export type {
   SkillGroup,
 } from "./types";
 
+export { articleFeeds, articles } from "./articles";
 export { awards } from "./awards";
 export { catalogs } from "./catalog";
 export type { Catalog } from "./catalog";
