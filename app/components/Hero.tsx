@@ -110,26 +110,16 @@ export function Hero({
         </div>
 
         <div className="relative mx-auto w-full max-w-md lg:max-w-none">
-          {/* Layered background patterns behind the portrait */}
+          {/* Strong circular halo behind the portrait */}
           <div
-            className="absolute inset-0 -z-10 rounded-[28px]"
+            className="pointer-events-none absolute left-1/2 top-[54%] -z-20 aspect-square w-[92%] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[2px]"
             style={{
               background:
-                "radial-gradient(circle at 30% 20%, var(--glow), transparent 45%), radial-gradient(circle at 70% 80%, color-mix(in oklab, var(--glow) 35%, transparent), transparent 55%), linear-gradient(to bottom, rgba(255,255,255,0.04), transparent 45%)",
+                "radial-gradient(circle at 50% 60%, color-mix(in oklab, var(--glow) 62%, #7dd3fc 28%) 0%, color-mix(in oklab, var(--glow) 42%, #a78bfa 30%) 45%, transparent 72%)",
             }}
           />
 
-          {/* Extra soft circular gradient ring */}
-          <div
-            className="absolute inset-[-8%] -z-20 rounded-full"
-            style={{
-              background:
-                // Bottom-to-top pour with two tones so the gradient reads clearly.
-                "radial-gradient(circle at 50% 120%, color-mix(in oklab, var(--glow) 52%, #7dd3fc 30%), transparent 56%), linear-gradient(to top, color-mix(in oklab, var(--glow) 36%, #a78bfa 26%), transparent 72%), radial-gradient(circle at 50% 55%, transparent 60%, color-mix(in oklab, var(--glow) 28%, #a78bfa 24%), transparent 74%)",
-            }}
-          />
-
-          <div className="relative rounded-[28px] bg-surface-elevated/10 p-3 backdrop-blur-sm md:p-4">
+          <div className="relative p-3 md:p-4">
             <Image
               src={portrait}
               alt={profile.displayName}
