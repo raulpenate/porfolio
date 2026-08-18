@@ -112,11 +112,11 @@ export function Hero({
         <div className="relative mx-auto w-full max-w-md lg:max-w-none isolate">
           {/* Strong circular halo behind the portrait */}
           <div
-            className="pointer-events-none absolute left-1/2 top-[54%] z-0 aspect-square w-[100%] -translate-x-1/2 -translate-y-1/2 rounded-full"
+            className="pointer-events-none absolute left-1/2 top-[54%] z-0 aspect-square w-[100%] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[2px]"
             style={{
               background:
                 // Visible ring stroke + soft inner glow.
-                "radial-gradient(circle at 50% 55%, rgba(0,0,0,0) 54%, rgba(125,211,252,0.95) 57%, rgba(167,139,250,0.65) 60%, rgba(0,0,0,0) 66%), radial-gradient(circle at 50% 55%, rgba(125,211,252,0.28) 0%, rgba(0,0,0,0) 72%)",
+                "radial-gradient(circle at 50% 55%, rgba(0,0,0,0) 48%, rgba(125,211,252,0.55) 54%, rgba(167,139,250,0.35) 60%, rgba(0,0,0,0) 68%), radial-gradient(circle at 50% 55%, rgba(125,211,252,0.18) 0%, rgba(0,0,0,0) 72%)",
             }}
           />
 
