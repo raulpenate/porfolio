@@ -112,10 +112,10 @@ export function Hero({
         <div className="relative mx-auto w-full max-w-md lg:max-w-none">
           {/* Strong circular halo behind the portrait */}
           <div
-            className="pointer-events-none absolute left-1/2 top-[54%] -z-20 aspect-square w-[92%] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[2px]"
+            className="pointer-events-none absolute left-1/2 top-[54%] -z-20 aspect-square w-[95%] -translate-x-1/2 -translate-y-1/2 rounded-full"
             style={{
               background:
-                "radial-gradient(circle at 50% 60%, color-mix(in oklab, var(--glow) 62%, #7dd3fc 28%) 0%, color-mix(in oklab, var(--glow) 42%, #a78bfa 30%) 45%, transparent 72%)",
+                "radial-gradient(circle at 50% 58%, rgba(125,211,252,0.5) 0%, rgba(167,139,250,0.35) 45%, rgba(0,0,0,0) 72%), radial-gradient(circle at 50% 58%, rgba(0,0,0,0) 64%, rgba(125,211,252,0.55) 68%, rgba(0,0,0,0) 73%)",
             }}
           />
 
