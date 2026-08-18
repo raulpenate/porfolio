@@ -16,9 +16,9 @@ This portfolio links to my `archinstaller` script:
 flowchart TD
   A[Update content and/or UI] --> B[Run checks (lint/build)]
   B --> C[git status + git diff]
-  C --> D[git commit -m "message"]
+  C --> D[git commit -m message]
   D --> E[git push -u origin HEAD]
-  E --> F[Open PR with `gh pr create`]
+  E --> F[Open PR with gh pr create]
 ```
 
 Example commands:
